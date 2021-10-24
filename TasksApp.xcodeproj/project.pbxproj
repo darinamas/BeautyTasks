@@ -19,6 +19,9 @@
 		44E266FA271F103300DDF2F1 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E266F9271F103300DDF2F1 /* SettingsVC.swift */; };
 		44E266FD271F15A200DDF2F1 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E266FC271F15A200DDF2F1 /* TabBar.swift */; };
 		44E26700271F185500DDF2F1 /* CellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E266FF271F185500DDF2F1 /* CellTableViewCell.swift */; };
+		9F2D3EE827259DEC00001266 /* DropDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2D3EE727259DEC00001266 /* DropDownView.swift */; };
+		9F2D3EEB2725A09300001266 /* DropDownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2D3EEA2725A09300001266 /* DropDownButton.swift */; };
+		9F2D3EED2725AAA800001266 /* CellForDropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2D3EEC2725AAA700001266 /* CellForDropDown.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +55,9 @@
 		44E266F9271F103300DDF2F1 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		44E266FC271F15A200DDF2F1 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		44E266FF271F185500DDF2F1 /* CellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTableViewCell.swift; sourceTree = "<group>"; };
+		9F2D3EE727259DEC00001266 /* DropDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownView.swift; sourceTree = "<group>"; };
+		9F2D3EEA2725A09300001266 /* DropDownButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownButton.swift; sourceTree = "<group>"; };
+		9F2D3EEC2725AAA700001266 /* CellForDropDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellForDropDown.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +136,7 @@
 		44E266FB271F103700DDF2F1 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				9F2D3EE927259DF700001266 /* Custom Drop Down */,
 				44D7446227201E30001E7C8D /* Custom Text Field */,
 				44E266E4271F0E4700DDF2F1 /* MainVC.swift */,
 				44E266FF271F185500DDF2F1 /* CellTableViewCell.swift */,
@@ -145,6 +152,16 @@
 				44E266FC271F15A200DDF2F1 /* TabBar.swift */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		9F2D3EE927259DF700001266 /* Custom Drop Down */ = {
+			isa = PBXGroup;
+			children = (
+				9F2D3EE727259DEC00001266 /* DropDownView.swift */,
+				9F2D3EEA2725A09300001266 /* DropDownButton.swift */,
+				9F2D3EEC2725AAA700001266 /* CellForDropDown.swift */,
+			);
+			path = "Custom Drop Down";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,8 +235,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F2D3EED2725AAA800001266 /* CellForDropDown.swift in Sources */,
+				9F2D3EE827259DEC00001266 /* DropDownView.swift in Sources */,
 				44E266EB271F0E4700DDF2F1 /* TasksApp.xcdatamodeld in Sources */,
 				44E266E5271F0E4700DDF2F1 /* MainVC.swift in Sources */,
+				9F2D3EEB2725A09300001266 /* DropDownButton.swift in Sources */,
 				44E266E1271F0E4600DDF2F1 /* AppDelegate.swift in Sources */,
 				44E266F8271F102100DDF2F1 /* TaskVC.swift in Sources */,
 				44E266E3271F0E4700DDF2F1 /* SceneDelegate.swift in Sources */,

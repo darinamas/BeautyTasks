@@ -1,15 +1,7 @@
-//
-//  ViewController.swift
-//  TasksApp
-//
-//  Created by Daryna Polevyk on 19.10.2021.
-//
-
 import UIKit
 
 class MainVC: UITableViewController {
 
-    
     let identifier = "cell"
     override func viewDidLoad() {
         super.viewDidLoad()
