@@ -8,13 +8,15 @@
 import UIKit
 
 class SettingsVC: UIViewController {
-
+    
     var langSwitch: UISegmentedControl!
+    var button = DropDownButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         setSwitch()
+        setDropDown()
     }
     
     func setSwitch() {
@@ -28,4 +30,36 @@ class SettingsVC: UIViewController {
         langSwitch.selectedSegmentIndex = 0
         view.addSubview(langSwitch)
     }
+    
+    func setDropDown() {
+        //Configure the button
+        button = DropDownButton.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+        button.setTitle("Colors", for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        
+        //Add Button to the View Controller
+        self.view.addSubview(button)
+        
+        //button Constraints
+        button.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        button.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+        button.widthAnchor.constraint(equalToConstant: 300).isActive = true
+        button.heightAnchor.constraint(equalToConstant: 80).isActive = true
+        
+        //  Set the drop down menu's options
+        button.dropView.dropDownOptions = generateArray()
+    }
+    
+    func generateArray() -> [String] {
+        let array = ["Blue", "Green", "Magenta", "White", "Card", "Card", "Name", "Black", "Pink", "Name"]
+        var newArray: [String] = []
+        let randomNumber = Int.random(in: 3..<8)
+        for _ in 1...randomNumber {
+            let newElement = array.randomElement()
+            newArray.append(newElement!)
+        }
+        return newArray
+    }
 }
+
+
