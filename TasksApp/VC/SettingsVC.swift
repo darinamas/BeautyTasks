@@ -11,12 +11,15 @@ class SettingsVC: UIViewController {
     
     var langSwitch: UISegmentedControl!
     var button = DropDownButton()
+    var button2 = DropDownButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         setSwitch()
         setDropDown()
+
+        setDropDown2()
     }
     
     func setSwitch() {
@@ -48,6 +51,25 @@ class SettingsVC: UIViewController {
         
         //  Set the drop down menu's options
         button.dropView.dropDownOptions = generateArray()
+    }
+    
+    func setDropDown2() {
+        //Configure the button
+        button2 = DropDownButton.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+        button2.setTitle("Colors2", for: .normal)
+        button2.translatesAutoresizingMaskIntoConstraints = false
+        
+        //Add Button to the View Controller
+        self.view.addSubview(button2)
+        
+        //button Constraints
+        button2.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        button2.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: 100).isActive = true
+        button2.widthAnchor.constraint(equalToConstant: 300).isActive = true
+        button2.heightAnchor.constraint(equalToConstant: 80).isActive = true
+        
+        //  Set the drop down menu's options
+        button2.dropView.dropDownOptions = generateArray()
     }
     
     func generateArray() -> [String] {
