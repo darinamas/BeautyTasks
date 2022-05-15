@@ -38,7 +38,7 @@ extension MainVC {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCell(withIdentifier: identifier) as! CellTableViewCell
-        
+        print("Hello")
         return cell
     }
     
